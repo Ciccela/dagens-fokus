@@ -1,0 +1,13 @@
+{
+  "name": "dagens-fokus",
+  "version": "1.0.0",
+  "private": true,
+  "description": "En enkel hobbyapp: Dagens Fokus (HTML/CSS/JS)",
+  "scripts": {
+    "dev": "live-server --port=5500 --open=index.html",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

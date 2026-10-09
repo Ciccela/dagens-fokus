@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dagens Fokus</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container page-enter">
+    <header class="topbar">
+      <div class="brand-badge">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-text">Fokus by Cecilia</span>
+      </div>
+    </header>
+
+    <h1>🎯 Dagens Fokus</h1>
+    <p class="subtitle">En sak. Fullt fokus. Klart.</p>
+
+    <section class="card">
+      <label for="taskInput">Vad är din viktigaste uppgift idag?</label>
+      <div class="row">
+        <input
+          id="taskInput"
+          type="text"
+          placeholder="Ex: Skriva klart rapporten"
+          autocomplete="off"
+        />
+        <button id="saveTaskBtn" type="button">Spara</button>
+      </div>
+
+      <p id="savedTask" class="saved-task">Ingen uppgift sparad ännu.</p>
+
+      <div class="row small-gap">
+        <button id="doneBtn" class="success" type="button">✅ Markera klar</button>
+        <button id="clearBtn" class="danger" type="button">🗑️ Rensa</button>
+      </div>
+    </section>
+
+    <section class="card timer-card" id="timerCard">
+      <h2>⏱️ Fokus-timer</h2>
+
+      <div class="timer-wrap">
+        <svg class="progress-ring" width="260" height="260" viewBox="0 0 260 260" aria-hidden="true">
+          <circle class="ring-bg" cx="130" cy="130" r="110"></circle>
+          <circle class="ring-progress" id="ringProgress" cx="130" cy="130" r="110"></circle>
+        </svg>
+
+        <div class="timer" id="timerDisplay" aria-live="polite">25:00</div>
+      </div>
+
+      <div class="row">
+        <button data-minutes="25" class="preset" type="button">25 min</button>
+        <button data-minutes="15" class="preset" type="button">15 min</button>
+        <button data-minutes="5" class="preset" type="button">5 min</button>
+      </div>
+
+      <div class="row small-gap">
+        <button id="startBtn" type="button">Start</button>
+        <button id="pauseBtn" type="button">Paus</button>
+        <button id="resetBtn" type="button">Återställ</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
